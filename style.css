@@ -1,0 +1,1090 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Courier+Prime&family=Crimson+Pro&family=Crimson+Text&family=East+Sea+Dokdo&family=Libre+Baskerville&family=Noto+Sans+Symbols+2&family=Playfair+Display&family=Reenie+Beanie&family=Roboto+Slab&family=Staatliches&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Girassol&family=Kaushan+Script&family=Ms+Madi&family=Playfair+Display+SC&family=Special+Elite&family=Spectral+SC&family=Uchen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/********** COLOR VARIABLES **********/
+:root{
+	/*text*/
+	--text: #d5d9e0;
+	--link: #4ad9a2;
+	--linkhover: white;
+	--redlink: #CC0000;
+	--header: white;
+	--boxheader: white;
+	
+	/*borders and underlines*/
+	--mainborder: #07361c;
+	--boxborder: #378376;
+	--headerunderline: #3fb085;
+	
+	/*backgrounds*/
+	--bodybg: #0a0a0a;
+	--mainbg: black;
+	--boxbg: black; 
+	--boxheaderbg: #65a396;
+	--sidebarlinkhoverbg:#58d6a1;
+	--headingimg: url("https://images.unsplash.com/photo-1581622325708-6dabe16e0a2c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Ymx1ZSUyMGdyZWVufGVufDB8fDB8fHww");
+	--headingborder: #24a791;
+}
+
+
+
+/********** BASIC STYLING **********/
+
+body{
+	background: linear-gradient(rgb(0,0,0,0.2),rgb(0,0,0,0.8)), url("https://sadhost.neocities.org/images/tiles/greengrid.jpg");
+  background-size: 40%;
+	color: var(--text);
+	font-family: roboto;
+	margin: 0;
+	padding: 0;
+  background-position: 40% 90%;
+  background-attachment: fixed;
+  font-size: .95em;
+  line-height: 1.2em;
+  width: 90%;
+  margin: 0 auto;
+  
+}
+
+a{color: var(--link); text-decoration: none;}
+a:hover{
+  color: var(--linkhover);
+  font-style: italic;
+}
+
+
+h1, h2, h3, h4, h5{
+	margin-top: 0;  
+	font-family: times new roman;
+text-shadow: 4px 2px 4px rgba(0,0,0,1);}
+
+h1 {
+ border-bottom: 2px solid var(--headerunderline);
+  overflow: hidden;
+	clear: left;
+  color: var(--header);
+  padding-bottom: 8px;
+  padding-top: 1px;
+   font-weight: normal;
+  font-size: 1.9em;
+   font-family: times new roman;
+   	margin-left: -7px;
+}
+
+h2{
+	color: var(--header); 
+font-weight: normal;
+	border-bottom: 2px solid var(--headerunderline);
+	
+	overflow: hidden;
+	clear: left;
+	padding-bottom: 5px;
+	font-family: times new roman;
+	
+}
+h3{
+  font-size: 1.2em;
+}
+
+h4,h5{
+  font-size: 1.3em;
+color: var(--header); 
+font-weight: normal;
+margin-left: -5px;
+}
+img{max-width: 100%}
+
+header{
+  height: 100px;
+    background: linear-gradient(rgb(0,0,0,0.2),rgb(0,0,0,0.5)), url("https://f2.toyhou.se/file/f2-toyhou-se/images/58165323_gL0lPCbkhiW6Hrq.png");
+  margin-bottom: 0px;
+
+
+  text-align: center;
+    font-size:3.9em;
+  padding-top: 40px;
+  line-height: 25px;
+  font-family: playfair display SC;
+color: white;
+  text-shadow: 2px 2px 2px black;
+  
+}
+.quotebox{
+  width: 30%;
+  background-size: cover;
+  font-style: italic; 
+  padding: 10px; 
+  border-left: 3px;
+ padding: 13px;
+  border-left: solid;
+ 
+color: var(--link);
+}
+
+/********** UTILITY CLASSES **********/
+
+.text-center{text-align: center;}
+
+a.redlink{text-decoration: none; color: var(--redlink);}
+
+.big-text{font-size: large;}
+
+.clear-both{clear: both;}
+
+/********** GRID CONTAINER **********/
+
+.container{
+	display: grid;
+	grid-template-columns: 180px auto;
+	grid-template-rows: 1fr auto;
+	grid-template-areas: 
+		"sidebar main"
+		"footer footer";
+	row-gap: 15px;
+	column-gap: 15px;
+	margin: 0px 5px 5px   0px ;
+	min-height: Calc(100vh - 15px);
+}
+
+/********** SIDEBAR **********/
+
+sidebar{
+	grid-area: sidebar;
+ 
+  
+}
+
+sidebar .logo-image{
+	margin-bottom: 10px;
+ 
+  
+}
+sidebar h2{
+  text-align: center;
+  background: var(--headingimg);
+    background-size: cover;
+  background-position: 0% 100%;
+  
+  margin-bottom: 0px;
+  padding: 3px;
+  font-size: 1.3em;
+  border: 3px outset var(--headingborder);
+  
+}
+
+/***** sidebar navs *****/
+
+sidebar nav{
+	padding: 1px;
+	background-color: var(--mainbg);
+	margin-bottom: 10px;
+  	border: 3px inset var(--boxborder);
+
+
+
+}
+
+sidebar nav h2{
+	margin: 0 ;
+	font-size: 14pt;
+  font-family: Special Elite;
+ background-color: var(--link);
+  margin: 0px;
+  text-align: center;
+    	border: 2px inset;
+		
+
+
+}
+
+.buttonbox {
+  
+  padding: 8px 15px; /* Spacing inside the button */
+  font-size: .95em;
+  border-radius: 5px; /* Slightly rounded corners */
+  border: 2px solid var(--boxborder); /* A subtle border */
+  background-color: var(--bodybg); /* Light grey background */
+  text-align: center;
+}
+
+button {
+  background-color: var(--bodybg);
+  color: var(--link);
+  border: none;
+  padding: 5px;
+}
+
+button:hover {
+  color: white;
+  font-style: italic;
+}
+
+
+
+/********** MAIN **********/
+
+main{
+	grid-area: main;
+	padding: 23px;
+	background-color: var(--mainbg);
+	font-size: 1em;
+line-height: 1.3em;
+	border: 3px outset var(--boxborder);
+	border-radius: 1%;
+	border-right: none;
+  
+}
+p{
+  word-spacing: .03em;
+  font-size: 1.05em;
+  font-weight: 400;
+ 
+}
+
+/***** boxes *****/
+
+.box-row{
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: stretch;
+	column-gap: 10px;
+}
+
+.box{
+	padding: 10px;
+	background-color: var(--boxbg);
+	flex: 1 1 0;
+	
+	border-radius: 3x;
+	border: 2px solid var(--boxborder);
+}
+
+.box h1, .box h2, .box h3, .box h4, .box h5{
+	color: var(--boxheader);
+	background-color: var(--boxheaderbg);
+  background-image: url("https://images.unsplash.com/photo-1554788625-51d9860bdb28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80");
+  background-size: cover;
+  background-position: 30% 50%;
+	padding: 5px;
+	
+	border-radius: 3px;
+	border-bottom: none;
+}
+
+/***** box navs *****/
+
+ul.box-nav{
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 0;
+}
+
+ul.box-nav li{
+	flex: 1 1 0;
+
+}
+
+ul.box-nav a{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/***** infobox *****/
+
+table.infobox{
+	background-color: var(--boxbg);
+	padding: 2px;
+	border: 2px solid var(--boxborder);
+	width: 300px;
+	
+	float: right;
+	margin-left: 10px;
+	
+	text-align: left;
+}
+
+table.infobox tbody{
+	vertical-align: top;
+}
+
+table.infobox th[colspan="2"]{
+	text-align: center;
+}
+
+.infobox h1, .infobox h2, .infobox h3, .infobox h4, .infobox h5{
+	border-bottom: none;
+	background-color: var(--boxheaderbg);
+	color: var(--text);
+	margin: 0;
+}
+
+table.infobox th, table.infobox td{
+	padding: 5px;
+}
+
+/*table of contents*/
+.showcontent{
+  padding: 5px;
+  font-weight: bold;
+ 
+}
+.contents{
+background-color: var(--boxbg);
+  width: 14%;
+ padding: 7px;
+ border: 2px solid var(--boxborder);
+   margin-bottom: 10px;
+}
+/*this changes the dropdown to a hamburger menu for desktop screens*/
+.toc summary {
+    list-style-type: '★ ';
+}
+.toc ul{
+ list-style: none;
+  margin-left: -30px;
+}
+
+/***** floating images *****/
+figure.left-image, figure.right-image{
+	padding: 5px;
+	margin: 0 0 5px 0;
+	max-width: 253px;
+	
+	border: 2px solid var(--boxborder);
+}
+
+figure.left-image img, figure.right-image img{
+	max-width: 250px;
+	
+	border: 2px solid var(--boxborder);
+}
+
+figure.left-image{
+	float: left;
+	clear: left;
+	margin-right: 10px;
+}
+
+figure.right-image{
+	float: right;
+	clear: right;
+	margin-left: 10px;
+}
+
+/***** notice boxes (for stubs, spoilers, etc) *****/
+
+.notice{
+	background-color: var(--boxbg);
+	padding: 10px;
+	margin: 0 auto 10px auto;
+	
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	
+	border: 2px solid var(--boxborder);
+}
+
+.notice p{
+	margin: 0 0 0 10px;
+	font-style: italic;
+}
+
+
+/********** FOOTER **********/
+
+footer{
+	grid-area: footer;
+	text-align: center;
+}
+
+/********** MEDIUM/SMALL SCREENS **********/
+
+@media (max-width:1000px) {
+	
+	/*turn the grid into a column*/
+	.container{
+		display: flex;
+		flex-direction: column;
+		margin-top: 0;
+		margin-bottom: 0;
+		min-height: 100vh;
+	}
+	
+	/*detach main from left side*/
+	main{
+		flex-grow: 1;
+		margin: 0 10px;
+		
+		border-radius: 10px;
+		border-right: 2px solid var(--mainborder);
+	}
+	
+	/*hide logo image*/
+	.logo-image{display: none;}
+	
+	/*make the sidebar navs horizontal*/
+	sidebar nav{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		
+		padding: 0;
+		margin: 0;
+		
+		border-radius: 0;
+		border-right: none;
+		border-top: none;
+	}
+	
+	sidebar nav h2{border-bottom: none;}
+	
+	sidebar nav ul{
+		
+		margin: 10px 0 0 0;
+		padding: 0;
+		margin: 0;
+		
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-grow: 1;
+		justify-content: space-evenly;
+	}
+	
+	sidebar nav a{
+    
+		padding: 4px;
+		border-radius: 4px;
+  
+	}
+}
+
+/********** SMALL SCREENS **********/
+
+@media (max-width:576px) {
+	
+	/*make the sidebar nav headers appear above the links, for space*/
+	sidebar nav{
+		flex-direction: column;
+	}
+	
+	/*make the sidebar nav links spread out a bit more*/
+	sidebar nav ul{
+		margin: 0;
+		padding: 0;
+		align-self: center;
+    list-style: none;
+	}
+  sidebar nav h2{
+    	font-size: 1.1em;
+      text-shadow: 4px 4px 2px rgba(0,0,0,0.8);
+  }
+	/*make box rows vertical*/
+	.box-row{
+		flex-direction: column;
+		row-gap: 10px;
+	}
+	
+	/*unfloat a bunch of stuff*/
+	table.infobox{
+		float: none;
+		width: 90%;
+		margin: auto;
+	}
+	
+	ul.box-nav li{flex: 0 0 50%; margin: 0 auto 10px auto;}
+	
+	figure.left-image, figure.right-image{
+		float: none;
+		display: block;
+		margin: 0 auto 5px auto;
+	}
+}
+/*my stuff*/
+
+
+/*series of*/
+.revealsummary{
+  text-align: center;
+ background-color:#141414;
+  padding: 10px;
+ font-weight: bold;
+  border: 1px solid #8658d6;
+  
+}
+.reveal{
+  text-align: center;
+ background-color:#141414;
+  padding: 5px;
+  width: 70%;
+  border: 2px solid #8658d6;
+
+}
+
+/*flair*/
+ #flair::before {
+  background-size: cover;
+  background-size: 25px 25px;
+  display: inline-block;
+  width: 22px; 
+  height: 20px;
+  margin-left: 4px;
+  content:"â—ˆ";
+}
+
+/*flair with image- delete above if using. you will need to play with the width and height to make it fit properly*/
+
+/*  #flair::before { background-image: url('https://i.ibb.co/SwkXQjP/itsalime.png');
+  background-size: cover;
+  background-size: 20px 25px;
+  display: inline-block;
+  width: 20px; 
+  height: 20px;
+  margin-left: 4px;
+  content:" ";
+}*/
+
+/*infotable*/
+.infotable {
+  float:right;
+  margin-left:5px;
+  /*you'll need a background color, a transparent box will show the header dividers*/
+  background:var(--mainbackground);
+  border-left:2px solid #0c5036;
+  border:2px solid #064b3f;
+  width:25%;
+  ;
+}
+.infotable img{
+  max-width: 100%;
+}
+.infotable th {
+  text-align:left;
+  padding: 5px;
+
+}
+.infotable th{
+   border 1px solid var(--boxborder);
+   
+  color: var(--boxbackground);
+   color: #d0c1de;
+}
+.infotable td{
+
+}
+.infotable ul{
+  list-style: none;
+
+  padding: 0px;
+  margin: 4px;
+}
+#centertext{
+  text-align: center;
+   background: var(--headingimg);
+    background-size: cover;
+  background-position: 0% 100%;
+   color: white;
+     border: 3px outset var(--headingborder);
+     font-family: times;
+
+}
+/*clear float after infobox*/
+#clear::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/*responsiveness*/
+
+/*narrow*/
+@media(max-width: 900px) {
+  .infotable{
+    width: 30%;
+  }
+    .wrapper{
+    width: 100%;
+  }
+      .chapters{
+    width: 50%;
+  }
+  .reveal{
+    width: 60%;
+  }
+  }  
+/*medium*/
+@media(max-width: 1250px) {
+  .infotable{
+    width: 35%;
+  }
+   .contents{
+    width: 40%;
+  }
+  .container{
+    width: 95%;
+  }
+  nav
+  font-size: 14pt;
+  }  
+
+/*mobile */
+@media(orientation: portrait) {
+  body{ 
+    background-position: 80% 100%;
+    background-size: cover;
+  }
+  
+  main{
+    	width: 100%;
+    margin: 0px;
+    padding: 18px;
+    border-radius: 0px;
+  
+  }
+ 
+  sidebar nav{
+     transform: revert;
+    border: 0px;
+     margin: auto;
+    font-size: 11pt;
+    
+  }
+  sidebar nav li{
+    list-style:none;
+  }
+  header{
+    
+    font-size: 2.5em;
+    height: 74px;
+    padding-top: 17px;
+  
+    
+     background: linear-gradient(rgb(0,0,0,1),rgb(0,0,0,0.1));
+
+    background-size: 18%;
+   background-position: -5% -5%;
+    background-repeat: no-repeat;
+    margin-bottom: 15px;
+  }
+
+  header a:hover {
+    text-decoration: none;
+}
+
+.no-underline {
+    text-decoration: none !important;
+}
+ nav{
+   font-size: 12pt;
+   margin-top: -5px;
+   display: block;
+   padding: 5px;
+   
+   
+  }
+  .quotebox{
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+    margin-top: 10px;
+  }
+  body{
+    margin-top: 0px;
+	
+  }
+   .infotable{
+    width: 100%;
+     margin-bottom: 20px;
+  }
+ 
+  .wrapper{
+    width: 100%;
+  }
+    .chapters{
+    width: 50%;
+  }
+  .main{
+    padding-top: 20px;
+	
+   
+  }
+  .contents{
+    width: 95%;
+  }
+  #forum{
+   min-height: 50px;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #302e2e;
+     display: flex;
+    font-size: 11pt;
+}
+#forumfirst{
+   height: 10%;
+    text-align: left;
+  display: flex;
+    font-size: 14pt;
+
+}
+
+#forum p{
+  margin: 0px;
+}
+   .reveal{
+    width: 95%;
+  }
+  #noclear{
+   clear: none; 
+  }
+  
+
+}
+
+/*kalechip's flexbox*/
+
+#charbox{
+max-width:  23%;
+  margin: auto;
+  text-align: center;
+
+}
+#charbox h3{
+  margin: 0px;
+  margin-top: -10px;
+}
+#icon{
+
+  max-width: 60%;
+  margin: 0px;
+}
+#charbox p{
+  margin-top: 3px;
+ 
+}
+
+.flexcontainer {
+    display:flex;
+    flex-wrap:wrap;
+    margin:auto;
+width: 99%;
+    
+
+}
+/*forums*/
+
+#forum{
+   min-height: 50px;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #302e2e;
+}
+#forumfirst{
+   height: 30px;
+    text-align: left;
+  padding-top: 10px;
+  font-size: 13pt;
+}
+#forum p{
+  margin: 0px;
+}
+#label{
+ color: #58d6c1;
+}
+#time{
+ font-weight: bold;
+}
+#forumicon {
+  float: left;
+  max-width: 50px;
+ }
+.topicicon{
+  max-width: 120px;
+ float:left;
+  padding-right: 10px;
+  padding-botton: 5px;
+  
+  
+}
+.topic{
+  border: 2px solid #302e2e;
+  border-left: 2px solid #8658d6;
+  width: 99%;
+  padding: 3px;
+   min-height: 120px;
+  font-size: 11.8pt;
+ 
+}
+.topic h1{
+  font-size: 19pt;
+  border-bottom: 0px;
+  margin-bottom: 0px;
+  padding-top: 1%;
+  margin-left: 2px;
+  clear: none;
+}
+.topic p{
+  margin: 8px;
+}
+.topic sup{
+  padding-left: 6px;
+}
+#post{
+  max-height: 10%;
+  width: 99%;
+
+  margin-top: 10px;
+  min-height: 100px;
+ padding-left: 5px;
+  padding-top: 0px;
+}
+#reply1{
+  max-height: 10%;
+  width: 97%;
+margin-left: auto; 
+margin-right: 0px;
+  margin-top: 10px;
+  min-height: 100px;
+ padding-left: 5px;
+  padding-top: 0px;
+}
+#reply2{
+  width: 94%;
+margin-left: auto; 
+margin-right: 0px;
+  margin-top: 10px;
+  min-height: 100px;
+ padding-left: 5px;
+  padding-top: 0px;
+}
+#reply3{
+  width: 90%;
+margin-left: auto; 
+margin-right: 0px;
+  margin-top: 10px;
+  min-height: 100px;
+ padding-left: 5px;
+  padding-top: 0px;
+}
+
+#final{
+  width: 88%;
+  height: 50px;
+border: 2px solid #302e2e;
+
+margin-left: auto; 
+margin-right: 0px;
+  margin-top: 10px;
+  padding-left: 10px;
+
+ 
+ 
+}
+.full { flex: 1 1 100%;}
+.half { flex: 1 1 50%; }
+.third { flex: 1 1 33%; }
+.twothird { flex: 1 1 66%; }
+.quarter { flex: 1 1 25%; }
+.threequarter { flex: 1 1 75%; }
+
+@media screen and (max-width: 1024px) {
+    .flexcontainer {
+        display:block;
+    }
+    #charbox{
+max-width:  100%;
+  margin: auto;
+  text-align: center;
+  padding: 9px;
+
+}
+.search{
+ text-align: center; padding: 8px;
+  display: none;
+}
+.searchheader{
+  display: none;
+}
+  .tabs p{
+    display: none;
+  }
+  .tabs{
+    padding: 15px;
+  }
+}
+
+.pagnation{
+  margin: auto;
+  text-align: center;
+}
+.pagnation a{
+    background-color: var(--link);
+  color: var(--linkhover);
+ padding: 3px 8px 3px 8px;
+  margin: 3px;
+  font-size: 0.82em;
+}
+#active{
+  background-color: var(--main);
+  color: var(--link);
+  border: 1px solid var(--link);
+  margin: 0px;
+}
+.maintable{
+  padding: 5px;
+  width: 100%;
+  border: 1px solid var(--mainborder);
+  text-align: center;
+}
+.maintable img{
+  max-width: 100%;
+}
+.maintable th{
+ border-bottom: 1px solid var(--mainborder);
+  
+}
+.maintable td{
+padding: 20px;
+}
+hr{
+  width: 90%;
+  background-image: url("https://images.unsplash.com/photo-1554788625-51d9860bdb28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80");
+  height: 3px;
+  background-position: 30% 50%;
+  border: 0px;
+}
+
+.search{
+ text-align: center; padding: 8px 
+}
+.searchheader{
+  
+}
+.tabs{
+  margin-top: -58px;
+ margin-bottom: 19px;
+  display: flex;
+
+}
+.tabs p{
+  background: url("https://images.unsplash.com/photo-1554788625-51d9860bdb28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80");
+  background-position: 30% 50%;
+  width: 5%;
+  padding: 1px 5px 1px 5px;
+  margin-bottom: 0px;
+  margin-right: 20px;
+  font-size: 0.78em;
+  text-align: center;
+  border: 2.4px inset #100d14;
+ border-bottom: 0px;
+  text-transform: uppercase;
+}
+input{
+  border: 2px outset black;
+  border-radius: 0px;
+}
+
+ /* Style the Image Used to Trigger the Modal */
+.myimgbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+  
+}
+
+ .modal-trigger {
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 200px; /* Still make them square */
+  width: 200px;  /* Still make them square */
+  object-fit: cover; /* Crucial for square images */
+  margin: 10px; /* Margin for each individual image */
+}
+
+.modal-trigger:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+  .modal-trigger { /* Change this from #myImg */
+    width: 100%;
+    /* Keep height if you want them square on small screens too,
+       or adjust for responsiveness */
+    height: auto;
+} 
