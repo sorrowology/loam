@@ -7,9 +7,9 @@ document.getElementById('links').innerHTML = `
         <li><a href="#">Factions</a></li>
 		<li><a href="#">Locations</a></li>
 		<li><a href="#">Nature</a></li>	
-		<li><a href="#">Events</a></li>
+		<li><a href="/loam/events/timeline.html">Events</a></li>
         <li><a href="#">Random Page</a></li>
-        <li><a href="#">Sitemap</a></li>
+        <li><a href="/sitemap.html">Sitemap</a></li>
 				</ul>
 				</nav><!--end of sidebar nav-->
 
